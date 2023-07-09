@@ -12,10 +12,12 @@ export const ContactsPage = ({ contacts, onAdd }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    /*
-    Add contact info and clear data
-    if the contact name is not a duplicate
-    */
+    if (!isDupeName) {
+      onAdd(name, phone, email);
+      setName('');
+      setPhone('');
+      setEmail('');
+    }
   };
 
   useEffect(() => {
