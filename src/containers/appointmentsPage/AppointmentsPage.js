@@ -12,10 +12,11 @@ export const AppointmentsPage = ({ appointments, contacts, onAdd }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    /*
-    Add contact info and clear data  
-    */
-   
+    onAdd(name, contact, date, time);
+    setName('');
+    setContact('');
+    setDate('');
+    setTime('');
   };
 
   return (
