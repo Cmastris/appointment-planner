@@ -8,6 +8,7 @@ export const ContactsPage = ({ contacts, onAdd }) => {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
+  const [isDupeName, setIsDupeName] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -17,10 +18,10 @@ export const ContactsPage = ({ contacts, onAdd }) => {
     */
   };
 
-  /*
-  Using hooks, check for contact name in the 
-  contacts array variable in props
-  */
+  useEffect(() => {
+    const isDuplicate = contacts.some(c => c.name === name);
+    setIsDupeName(isDuplicate);
+  }, [name, contacts]);
 
   return (
     <div>
