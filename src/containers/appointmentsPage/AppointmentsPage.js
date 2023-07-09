@@ -39,6 +39,7 @@ export const AppointmentsPage = ({ appointments, contacts, onAdd }) => {
       <hr />
       <section>
         <h2>Appointments</h2>
+        <TileList tileData={appointments} />
       </section>
     </div>
   );
