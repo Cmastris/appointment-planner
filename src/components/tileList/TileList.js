@@ -1,6 +1,6 @@
 import React from "react";
 
-export const TileList = ({contacts}) => {
+export const TileList = ({ tileData }) => {
   return (
     <div>
       
