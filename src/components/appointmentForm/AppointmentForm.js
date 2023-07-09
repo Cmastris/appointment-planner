@@ -9,8 +9,8 @@ const getTodayString = () => {
 
 export const AppointmentForm = ({
   contacts,
-  title,
-  setTitle,
+  name,
+  setName,
   contact,
   setContact,
   date,
