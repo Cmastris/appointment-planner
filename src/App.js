@@ -16,6 +16,13 @@ function App() {
     });
   };
 
+  const addAppointment = (name, contact, date, time) => {
+    const newAppointment = { name, contact, date, time };
+    setAppointments(prev => {
+      return [...prev, newAppointment];
+    });
+  };
+
   const router = createBrowserRouter(createRoutesFromElements(
     <Route path="/" element={ <Root/> }>
       <Route index element={ <Navigate to={ROUTES.CONTACTS} replace/> }/>
